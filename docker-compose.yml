@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  nodeapp:
+    container_name: credit_calculator_service
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+    depends_on:
+      - mysqldb
+    networks:
+      - internalnet
+
+  mysqldb:
+    image: mysql:8.0.34
+    container_name: ${MYSQL_HOST}
+    restart: unless-stopped
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - $HOME/database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}:3306
+    expose:
+      - ${MYSQL_PORT}
+    networks:
+      - internalnet
+
+networks:
+  internalnet:
+    driver: bridge
