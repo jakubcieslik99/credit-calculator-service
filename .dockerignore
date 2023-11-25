@@ -1,4 +1,7 @@
 node_modules/
+dist/
+build/
+coverage/
 Dockerfile
 docker-compose.yml
 .dockerignore
