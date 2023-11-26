@@ -35,16 +35,10 @@ Database used in this project is MySQL.
   npm install
 ```
 
-- Build service docker image
+- Run service in development mode with docker-compose and Docker Desktop
 
 ```bash
-  docker-compose build
-```
-
-- Run service in development mode with docker
-
-```bash
-  docker-compose up
+  npm run docker:dev
 ```
 
 ## Deployment
