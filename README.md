@@ -58,6 +58,40 @@ Database used in this project is MySQL.
   npm run start
 ```
 
+## Environment Variables
+
+⚙️ To run service, you will need to add the following environment variables to your .env file
+
+- `DIR`
+
+- `ENV`
+
+- `MYSQL_VER`
+
+- `HOST`
+
+- `PORT`
+
+- `MYSQL_HOST`
+
+- `MYSQL_PORT`
+
+- `MYSQL_DB`
+
+- `MYSQL_USER`
+
+- `MYSQL_PASSWORD`
+
+- `GMAIL_ADDRESS`
+
+- `GMAIL_PASSWORD`
+
+- `NOREPLY_ADDRESS`
+
+## Languages
+
+🔤 Available API messages languages: **PL**
+
 ## Feedback
 
 If you have any feedback, please reach out to me at ✉️ contact@jakubcieslik.com
