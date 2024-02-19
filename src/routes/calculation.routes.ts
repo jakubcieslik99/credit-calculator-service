@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createCalculation, getCalculation } from '../controllers/calculation.controller';
+import { createCalculation, getCalculation } from '../controllers/calculation.controller.js';
 
 const calculationRoutes = Router();
 

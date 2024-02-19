@@ -1,5 +1,5 @@
-import { Code } from '../enum/code.enum';
-import { Status } from '../enum/status.enum';
+import { Code } from '../enum/code.enum.js';
+import { Status } from '../enum/status.enum.js';
 
 export class HttpError {
   private timeStamp: string;

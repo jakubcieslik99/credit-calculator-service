@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
 import { FieldPacket, ResultSetHeader, RowDataPacket } from 'mysql2';
-import { connection } from '../config/database.config';
-import { InterestRate } from '../interface/interestRate';
-import { RATE_QUERY } from '../database/interestRate.query';
-import { HttpResponse } from '../utils/httpResponse.util';
-import { HttpError } from '../utils/httpError.util';
-import { Code } from '../enum/code.enum';
-import { Status } from '../enum/status.enum';
+import { connection } from '../config/database.config.js';
+import { InterestRate } from '../interface/interestRate.js';
+import { RATE_QUERY } from '../database/interestRate.query.js';
+import { HttpResponse } from '../utils/httpResponse.util.js';
+import { HttpError } from '../utils/httpError.util.js';
+import { Code } from '../enum/code.enum.js';
+import { Status } from '../enum/status.enum.js';
 
 type ResultSet = [RowDataPacket[] | RowDataPacket[][] | ResultSetHeader, FieldPacket[]];
 

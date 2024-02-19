@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getInterestRate } from '../controllers/interestRate.controller';
+import { getInterestRate } from '../controllers/interestRate.controller.js';
 
 const interestRateRoutes = Router();
 

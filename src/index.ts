@@ -1,4 +1,4 @@
-import { Service } from './service';
+import { Service } from './service.js';
 
 const start = (): void => {
   const service = new Service();

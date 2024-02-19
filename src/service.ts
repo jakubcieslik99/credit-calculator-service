@@ -1,12 +1,12 @@
 import express, { Request, Response, Application } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import calculationRoutes from './routes/calculation.routes';
-import interestRateRoutes from './routes/interestRate.routes';
-import { HttpResponse } from './utils/httpResponse.util';
-import { HttpError } from './utils/httpError.util';
-import { Code } from './enum/code.enum';
-import { Status } from './enum/status.enum';
+import calculationRoutes from './routes/calculation.routes.js';
+import interestRateRoutes from './routes/interestRate.routes.js';
+import { HttpResponse } from './utils/httpResponse.util.js';
+import { HttpError } from './utils/httpError.util.js';
+import { Code } from './enum/code.enum.js';
+import { Status } from './enum/status.enum.js';
 
 export class Service {
   private readonly app: Application;
