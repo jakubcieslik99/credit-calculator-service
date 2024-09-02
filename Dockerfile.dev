@@ -1,0 +1,5 @@
+# Node.js full Docker local development Docker image file
+FROM node:lts-alpine
+WORKDIR /service
+RUN npm install -g pnpm
+RUN npm update -g pnpm

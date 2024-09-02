@@ -32,13 +32,13 @@ Database used in this project is MySQL.
 
 ```bash
   cd credit-calculator-service
-  npm install
+  pnpm install
 ```
 
 - Run service in development mode with docker-compose and Docker Desktop
 
 ```bash
-  npm run docker:dev
+  pnpm run docker:dev
 ```
 
 ## Deployment
@@ -48,44 +48,36 @@ Database used in this project is MySQL.
 - Transpile to production build
 
 ```bash
-  npm run build
+  pnpm run build
 ```
 
 - Run service in production mode
 
 ```bash
-  npm install --omit=dev
-  npm run start
+  pnpm install --prod
+  pnpm run start
 ```
 
 ## Environment Variables
 
 ⚙️ To run service, you will need to add the following environment variables to your .env file
 
-- `DIR`
-
-- `ENV`
+- `DIR` _(default already set for development)_
+- `ENV` _(default already set for development)_
 
 - `MYSQL_VER`
 
 - `HOST`
-
 - `PORT`
 
 - `MYSQL_HOST`
-
 - `MYSQL_PORT`
-
 - `MYSQL_DB`
-
 - `MYSQL_USER`
-
 - `MYSQL_PASSWORD`
 
 - `GMAIL_ADDRESS`
-
 - `GMAIL_PASSWORD`
-
 - `NOREPLY_ADDRESS`
 
 ## Languages

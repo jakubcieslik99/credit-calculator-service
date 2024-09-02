@@ -1,0 +1,43 @@
+# Node.js full Docker local development docker-compose file
+services:
+  service:
+    container_name: ${DIR}
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/service
+      - /node_modules:/service/node_modules
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - ENV=development
+      - MYSQL_HOST=${DIR}_mysql_dev # overwriting .env variable
+    ports:
+      - ${PORT}:${PORT}
+    expose:
+      - ${PORT}
+    command: sh -c "pnpm install && pnpm run dev"
+  # https://hub.docker.com/r/bitnami/mysql
+  mysql:
+    container_name: ${DIR}_mysql_dev
+    image: bitnami/mysql:${MYSQL_VER}
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - mysql_dev_data:/bitnami/mysql/data
+    env_file:
+      - .env
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DB} # database
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD} # Passw0rd!
+      MYSQL_ROOT_USER: ${MYSQL_USER} # root
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD} # Passw0rd!
+    ports:
+      - ${MYSQL_PORT}:3306
+    expose:
+      - ${MYSQL_PORT}
+volumes:
+  mysql_dev_data: {}
