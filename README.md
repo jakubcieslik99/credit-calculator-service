@@ -62,6 +62,8 @@ Database used in this project is MySQL.
 
 ⚙️ To run service, you will need to add the following environment variables to your .env file
 
+Vars:
+
 - `DIR` _(default already set for development)_
 - `ENV` _(default already set for development)_
 
@@ -74,11 +76,14 @@ Database used in this project is MySQL.
 - `MYSQL_PORT`
 - `MYSQL_DB`
 - `MYSQL_USER`
-- `MYSQL_PASSWORD`
 
 - `GMAIL_ADDRESS`
-- `GMAIL_PASSWORD`
 - `NOREPLY_ADDRESS`
+
+Secrets:
+
+- `MYSQL_PASSWORD`
+- `GMAIL_PASSWORD`
 
 ## Languages
 
