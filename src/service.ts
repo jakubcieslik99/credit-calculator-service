@@ -32,14 +32,14 @@ export class Service {
 
   private routes(): void {
     this.app.get('/', (_req: Request, res: Response) =>
-      res.status(Code.OK).send(new HttpResponse(Code.OK, Status.OK, 'Credit Calculator Service v1.0.0 by Jakub Cieślik'))
+      res.status(Code.OK).send(new HttpResponse(Code.OK, Status.OK, 'Credit Calculator Service v1.0.0 by Jakub Cieślik')),
     );
 
     this.app.use('/calculation', calculationRoutes);
     this.app.use('/interestRate', interestRateRoutes);
 
-    this.app.all('*', (_req: Request, res: Response) =>
-      res.status(Code.NOT_FOUND).send(new HttpError(Code.NOT_FOUND, Status.NOT_FOUND, this.ROUTE_NOT_FOUND))
+    this.app.all('/{*splat}', (_req: Request, res: Response) =>
+      res.status(Code.NOT_FOUND).send(new HttpError(Code.NOT_FOUND, Status.NOT_FOUND, this.ROUTE_NOT_FOUND)),
     );
   }
 }
