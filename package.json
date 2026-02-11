@@ -1,6 +1,6 @@
 {
   "name": "credit-calculator-service",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Credit Calculator Service",
   "type": "module",
   "main": "index.ts",
@@ -13,25 +13,25 @@
   },
   "author": "Jakub Cieślik",
   "license": "UNLICENSED",
-  "packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706",
+  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc",
   "dependencies": {
-    "axios": "^1.12.2",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "axios": "^1.13.5",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "helmet": "^8.1.0",
-    "mysql2": "^3.14.5",
+    "mysql2": "^3.17.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.4.0",
-    "@types/nodemailer": "^7.0.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "@types/nodemailer": "^7.0.9",
     "@types/xml2js": "^0.4.14",
-    "cross-env": "^10.0.0",
-    "dotenv": "^17.2.2",
-    "nodemon": "^3.1.10",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.4",
+    "nodemon": "^3.1.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
