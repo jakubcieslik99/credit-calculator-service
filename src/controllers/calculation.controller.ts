@@ -41,7 +41,7 @@ const saveCalculation = async (
   interestRate: number,
   interest: number,
   valueOfInstallment: number,
-  valueOfInstallmentIR: number
+  valueOfInstallmentIR: number,
 ) => {
   const Calculation: Calculation = {
     interestRate: `Stopa referencyjna: ${interestRate}%`,
@@ -78,8 +78,8 @@ export const createCalculation = async (req: Request, res: Response): Promise<Re
         new HttpError(
           Code.INTERNAL_SERVER_ERROR,
           Status.INTERNAL_SERVER_ERROR,
-          'Wystąpił błąd podczas dokonywania kalkulacji.'
-        )
+          'Wystąpił błąd podczas dokonywania kalkulacji.',
+        ),
       );
   }
 };
@@ -101,8 +101,8 @@ export const getCalculation = async (req: Request, res: Response): Promise<Respo
         new HttpError(
           Code.INTERNAL_SERVER_ERROR,
           Status.INTERNAL_SERVER_ERROR,
-          'Wystąpił błąd podczas pobierania kalkulacji.'
-        )
+          'Wystąpił błąd podczas pobierania kalkulacji.',
+        ),
       );
   }
 };

@@ -28,8 +28,8 @@ export const getInterestRate = async (req: Request, res: Response): Promise<Resp
         new HttpError(
           Code.INTERNAL_SERVER_ERROR,
           Status.INTERNAL_SERVER_ERROR,
-          'Wystąpił błąd podczas pobierania wartości stopy procentowej NBP.'
-        )
+          'Wystąpił błąd podczas pobierania wartości stopy procentowej NBP.',
+        ),
       );
   }
 };

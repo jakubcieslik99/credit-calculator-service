@@ -2,11 +2,13 @@ import { Code } from '../enum/code.enum.js';
 import { Status } from '../enum/status.enum.js';
 
 export class HttpError {
-  private timeStamp: string;
-  constructor(private statusCode: Code, private httpStatus: Status, private message: string) {
+  public readonly timeStamp: string;
+
+  constructor(
+    public readonly statusCode: Code,
+    public readonly httpStatus: Status,
+    public readonly message: string,
+  ) {
     this.timeStamp = new Date().toLocaleString();
-    this.statusCode = statusCode;
-    this.httpStatus = httpStatus;
-    this.message = message;
   }
 }
